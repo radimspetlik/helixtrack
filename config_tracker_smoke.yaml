@@ -1,0 +1,84 @@
+mode: textual
+
+analysis_filepath: output/helixtrack_smoke.h5
+recording_filepath: path/to/recording.raw
+tensorboard_log_file: tb_log.tfevents
+
+channel_num: 0
+
+stride_events: 1
+min_batch_size: 200
+
+start_us: 0
+end_us: 200000
+
+fps: 25
+acc: 100
+
+height: 720
+width: 1280
+
+tracker_init_x_center: 720
+tracker_init_y_center: 360
+
+tracker_init_radius_px: 36
+tracker_init_aspect_ratio: 1.0
+tracker_init_psi: 0.0
+tracker_init_rpm: 0.0
+tracker_init_phi0: 0.0
+
+tracker_kappa: 22.0
+tracker_q_jerk: 100.0
+tracker_rho: 0.5
+
+tracker_enable_radial_roi: true
+tracker_r_inner: 0.3
+tracker_r_outer: 1.3
+
+tracker_lambda_phase: 1.0
+tracker_lambda_radial: 1.0
+
+tracker_enable_polarity_phase_term: true
+tracker_lambda_pol: 1.0
+tracker_dtheta_pos: 0.25
+tracker_dtheta_neg: -0.25
+tracker_kappa_scale: 0.25
+
+tracker_radial_centering: true
+tracker_band_tau_u: 0.05
+tracker_band_lambda: 8.0
+
+tracker_enable_tip_balance: true
+tracker_lambda_tip: 3.0
+tracker_sigma_core: 0.06
+tracker_delta: 0.03
+tracker_sigma_in: 0.02
+tracker_sigma_out: 0.02
+tracker_tau_occ: 0.05
+tracker_p_in_min: 0.50
+tracker_p_out_max: 0.50
+
+tracker_homography_solve_lambda_diag: 0.001
+
+tracker_gn_gamma_translation: 4.0
+tracker_gn_gamma_rotation: 1.0
+tracker_gn_gamma_scale: 1.0
+tracker_gn_gamma_perspective: 0.01
+
+tracker_rotation_sign: 0
+tracker_num_blades: 2
+tracker_enable_weights_visualization: false
+
+tracker_initial_rpm_ablation: 0.0
+tracker_initial_x_position_ablation: 0.0
+tracker_initial_x_and_radius_position_ablation: 0.0
+tracker_initial_scale_ablation: 0.0
+
+metrics:
+  sample_dt_us: 5000
+  noise_window_s: 0.5
+  steady_gt_slope_rpm_s: 5.0
+  step_threshold_rpm: 50.0
+  settling_tol_pct: 2.0
+  ramp_min_rpm_per_s: 50.0
+  event_timing_stride: 1000
