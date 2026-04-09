@@ -31,8 +31,8 @@ The implementation follows the same method names used in the paper:
 - `run_helixtrack.sh`: runtime wrapper for containerized execution
 - `singularity.def`: OpenEB-based Apptainer or Singularity definition file
 - `singularity_build.sh`: helper script that builds the container image
-- `config_tracker.yaml`: full example configuration
-- `config_tracker_smoke.yaml`: short smoke-test configuration
+- `config_tracker.yaml`: paper-aligned default configuration
+- `config_tracker_smoke.yaml`: short smoke-test configuration with the same tracker parameters
 
 This repository is intentionally limited to the tracker and evaluation code. Private data loggers, dataset creation tools, and recording infrastructure are not included.
 
@@ -150,8 +150,9 @@ The YAML configuration exposes the main method controls directly:
 - per-parameter Gauss-Newton step sizes
 
 The shipped YAML files are templates. Replace `recording_filepath` with your own
-recording before running. Use `config_tracker_smoke.yaml` for a short validation
-run and `config_tracker.yaml` for the full setup.
+recording before running. `config_tracker.yaml` uses the tracker parameters
+reported as the best setting in the paper. `config_tracker_smoke.yaml` keeps the
+same tracker parameters but shortens the run window for quick validation.
 
 ## Data
 
@@ -165,7 +166,7 @@ If you use this code, please cite:
 @inproceedings{spetlik2026helixtrack,
   title     = {HelixTrack: Event-Based Tracking and RPM Estimation of Propeller-like Objects},
   author    = {Spetlik, Radim and Pliska, Michal and Vrba, Vojtech and Matas, Jiri},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Findings},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition - FINDINGS Track (CVPRF)},
   year      = {2026}
 }
 ```

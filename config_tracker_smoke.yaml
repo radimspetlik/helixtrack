@@ -28,28 +28,28 @@ tracker_init_rpm: 0.0
 tracker_init_phi0: 0.0
 
 tracker_kappa: 22.0
-tracker_q_jerk: 100.0
+tracker_q_jerk: 400.0
 tracker_rho: 0.5
 
 tracker_enable_radial_roi: true
-tracker_r_inner: 0.3
-tracker_r_outer: 1.3
+tracker_r_inner: 0.2
+tracker_r_outer: 1.5
 
 tracker_lambda_phase: 1.0
 tracker_lambda_radial: 1.0
 
 tracker_enable_polarity_phase_term: true
-tracker_lambda_pol: 1.0
+tracker_lambda_pol: 0.25
 tracker_dtheta_pos: 0.25
 tracker_dtheta_neg: -0.25
 tracker_kappa_scale: 0.25
 
 tracker_radial_centering: true
 tracker_band_tau_u: 0.05
-tracker_band_lambda: 8.0
+tracker_band_lambda: 5.0
 
 tracker_enable_tip_balance: true
-tracker_lambda_tip: 3.0
+tracker_lambda_tip: 1.0
 tracker_sigma_core: 0.06
 tracker_delta: 0.03
 tracker_sigma_in: 0.02
@@ -60,10 +60,10 @@ tracker_p_out_max: 0.50
 
 tracker_homography_solve_lambda_diag: 0.001
 
-tracker_gn_gamma_translation: 4.0
+tracker_gn_gamma_translation: 6.0
 tracker_gn_gamma_rotation: 1.0
 tracker_gn_gamma_scale: 1.0
-tracker_gn_gamma_perspective: 0.01
+tracker_gn_gamma_perspective: 1.0
 
 tracker_rotation_sign: 0
 tracker_num_blades: 2
